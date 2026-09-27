@@ -97,6 +97,9 @@ body {
     color: var(--gold-accent);
     margin-bottom: 20px;
 }
+.middle{
+   -webkit-text-fill-color: #000000;
+}
 
 .history-hero h1 {
     font-size: clamp(2.4rem, 5vw, 4.2rem);
@@ -104,7 +107,6 @@ body {
     letter-spacing: 2px;
     line-height: 1.15;
     background: linear-gradient(180deg, #ffffff 40%, #94a3b8 100%);
-    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
 
