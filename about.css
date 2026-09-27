@@ -1,0 +1,506 @@
+/* ==========================================================================
+   Mercedes-Benz Heritage & History - Style Sheet (Matches Dark Luxury Theme)
+   ========================================================================== */
+
+:root {
+    --bg-primary: #0c0d11;
+    --bg-secondary: #14161d;
+    --bg-card: #181b22;
+    --bg-card-hover: #1e222b;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(212, 175, 55, 0.35);
+    --silver-accent: #e2e8f0;
+    --silver-dim: #94a3b8;
+    --silver-highlight: #f8fafc;
+    --gold-accent: #d4af37;
+    --text-primary: #f8f9fa;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.75;
+    overflow-x: hidden;
+}
+
+/* ---------------- Navbar Styling ---------------- */
+.history-navbar {
+    background-color: rgba(10, 11, 15, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 14px 0;
+    transition: all 0.3s ease;
+}
+
+.history-navbar .navbar-brand {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.history-navbar .nav-link {
+    color: var(--silver-dim);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    padding: 8px 18px !important;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.history-navbar .nav-link:hover,
+.history-navbar .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.history-navbar .nav-link.active {
+    border-bottom: 2px solid var(--gold-accent);
+}
+
+/* ---------------- Hero Section ---------------- */
+.history-hero {
+    position: relative;
+    padding: 120px 0 80px;
+    background: radial-gradient(circle at 50% 20%, rgba(30, 41, 59, 0.4) 0%, rgba(12, 13, 17, 1) 75%);
+    border-bottom: 1px solid var(--border-subtle);
+    overflow: hidden;
+}
+
+.history-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.hero-subtitle-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-accent);
+    margin-bottom: 20px;
+}
+
+.history-hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.15;
+    background: linear-gradient(180deg, #ffffff 40%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.history-hero .lead {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    max-width: 820px;
+    margin: 0 auto 35px;
+    line-height: 1.7;
+}
+
+/* Stats Counter Row */
+.stats-ribbon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--silver-highlight);
+    letter-spacing: 1px;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* ---------------- Era Quick Navigation ---------------- */
+.era-nav-sticky {
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+    background: rgba(12, 13, 17, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 12px 0;
+}
+
+.era-pills-container {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.era-pills-container::-webkit-scrollbar {
+    height: 4px;
+}
+
+.era-pills-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.era-pill {
+    white-space: nowrap;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+    padding: 6px 14px;
+    color: var(--silver-dim);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.era-pill:hover,
+.era-pill.active {
+    color: #ffffff;
+    background: rgba(212, 175, 55, 0.15);
+    border-color: var(--gold-accent);
+}
+
+/* ---------------- Timeline Container & Spine ---------------- */
+.timeline-section {
+    position: relative;
+    padding: 70px 0 100px;
+}
+
+/* Era Group Divider Header */
+.era-group-header {
+    position: relative;
+    padding: 50px 0 30px;
+    margin-top: 30px;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 40px;
+}
+
+.era-group-header .group-tag {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-accent);
+    font-weight: 600;
+}
+
+.era-group-header h2 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 8px 0;
+}
+
+.era-group-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* ---------------- 5-Year Era Card Styling ---------------- */
+.era-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 32px;
+    margin-bottom: 45px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.era-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.55), 0 0 20px rgba(255, 255, 255, 0.04);
+}
+
+/* Card Header */
+.era-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 14px;
+}
+
+.era-badge {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.05));
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: #f1dfa8;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 6px 16px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.era-sequence-tag {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+.era-title {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.35;
+    margin-bottom: 22px;
+}
+
+/* Image Showcase */
+.era-image-wrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0f1015;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    height: 100%;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.era-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    display: block;
+}
+
+.era-card:hover .era-img {
+    transform: scale(1.04);
+}
+
+.era-image-caption {
+    background: rgba(15, 17, 23, 0.95);
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    color: var(--silver-dim);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.era-image-caption i,
+.era-image-caption svg {
+    color: var(--gold-accent);
+    flex-shrink: 0;
+}
+
+/* Narrative Text Content */
+.era-text {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.era-text p {
+    margin-bottom: 14px;
+}
+
+.era-text p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-fact {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Highlights Chips Row */
+.era-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.era-chip {
+    font-size: 0.78rem;
+    padding: 5px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    color: var(--silver-accent);
+}
+
+.era-chip strong {
+    color: #ffffff;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+/* ---------------- Quote Banner ---------------- */
+.history-quote-box {
+    background: linear-gradient(135deg, rgba(20, 23, 31, 0.8), rgba(12, 13, 17, 0.95));
+    border: 1px solid var(--border-subtle);
+    border-left: 4px solid var(--gold-accent);
+    border-radius: 12px;
+    padding: 35px 40px;
+    margin: 50px 0;
+}
+
+.history-quote-box blockquote {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.history-quote-box cite {
+    font-size: 0.9rem;
+    color: var(--gold-accent);
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ---------------- Back To Top Floating Button ---------------- */
+.btn-back-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(20, 23, 31, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    text-decoration: none;
+}
+
+.btn-back-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-back-top:hover {
+    background: var(--gold-accent);
+    color: #000000;
+    border-color: var(--gold-accent);
+    transform: translateY(-3px);
+}
+
+/* ---------------- Footer ---------------- */
+.history-footer {
+    background-color: #08090b;
+    border-top: 1px solid var(--border-subtle);
+    padding: 45px 0 35px;
+    color: var(--text-muted);
+}
+
+.history-footer a {
+    color: var(--silver-accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.history-footer a:hover {
+    color: var(--gold-accent);
+}
+
+/* ---------------- Responsive Tweaks ---------------- */
+@media (max-width: 991.98px) {
+    .era-card {
+        padding: 24px;
+    }
+    .era-img {
+        height: 220px;
+        margin-bottom: 15px;
+    }
+    .era-image-wrapper {
+        min-height: auto;
+    }
+    .era-title {
+        font-size: 1.35rem;
+    }
+    .era-nav-sticky {
+        top: 60px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .history-hero {
+        padding: 80px 0 50px;
+    }
+    .era-badge-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .era-card {
+        padding: 18px;
+    }
+    .era-img {
+        height: 190px;
+    }
+    .stats-ribbon {
+        grid-template-columns: 1fr 1fr;
+    }
+}
