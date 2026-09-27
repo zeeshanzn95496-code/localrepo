@@ -1,6 +1,4 @@
-/* ==========================================================================
-   Mercedes-Benz Heritage & History - Style Sheet (Matches Dark Luxury Theme)
-   ========================================================================== */
+
 
 :root {
     --bg-primary: #0c0d11;
@@ -26,7 +24,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ---------------- Navbar Styling ---------------- */
+
 .history-navbar {
     background-color: rgba(10, 11, 15, 0.95);
     backdrop-filter: blur(12px);
@@ -66,7 +64,7 @@ body {
     border-bottom: 2px solid var(--gold-accent);
 }
 
-/* ---------------- Hero Section ---------------- */
+
 .history-hero {
     position: relative;
     padding: 120px 0 80px;
@@ -119,7 +117,7 @@ body {
     line-height: 1.7;
 }
 
-/* Stats Counter Row */
+
 .stats-ribbon {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -152,7 +150,7 @@ body {
     margin-top: 4px;
 }
 
-/* ---------------- Era Quick Navigation ---------------- */
+
 .era-nav-sticky {
     position: sticky;
     top: 70px;
@@ -201,13 +199,12 @@ body {
     border-color: var(--gold-accent);
 }
 
-/* ---------------- Timeline Container & Spine ---------------- */
+
 .timeline-section {
     position: relative;
     padding: 70px 0 100px;
 }
 
-/* Era Group Divider Header */
 .era-group-header {
     position: relative;
     padding: 50px 0 30px;
@@ -237,7 +234,7 @@ body {
     margin-bottom: 0;
 }
 
-/* ---------------- 5-Year Era Card Styling ---------------- */
+
 .era-card {
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
@@ -255,7 +252,7 @@ body {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.55), 0 0 20px rgba(255, 255, 255, 0.04);
 }
 
-/* Card Header */
+
 .era-badge-row {
     display: flex;
     align-items: center;
@@ -296,7 +293,7 @@ body {
     margin-bottom: 22px;
 }
 
-/* Image Showcase */
+
 .era-image-wrapper {
     position: relative;
     border-radius: 10px;
@@ -340,7 +337,7 @@ body {
     flex-shrink: 0;
 }
 
-/* Narrative Text Content */
+
 .era-text {
     font-size: 0.98rem;
     color: var(--text-secondary);
@@ -360,7 +357,7 @@ body {
     font-weight: 600;
 }
 
-/* Highlights Chips Row */
+
 .era-chips {
     display: flex;
     flex-wrap: wrap;
@@ -385,7 +382,7 @@ body {
     margin-right: 4px;
 }
 
-/* ---------------- Quote Banner ---------------- */
+
 .history-quote-box {
     background: linear-gradient(135deg, rgba(20, 23, 31, 0.8), rgba(12, 13, 17, 0.95));
     border: 1px solid var(--border-subtle);
@@ -411,7 +408,7 @@ body {
     text-transform: uppercase;
 }
 
-/* ---------------- Back To Top Floating Button ---------------- */
+
 .btn-back-top {
     position: fixed;
     bottom: 30px;
@@ -447,7 +444,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* ---------------- Footer ---------------- */
+
 .history-footer {
     background-color: #08090b;
     border-top: 1px solid var(--border-subtle);
@@ -465,7 +462,7 @@ body {
     color: var(--gold-accent);
 }
 
-/* ---------------- Responsive Tweaks ---------------- */
+
 @media (max-width: 991.98px) {
     .era-card {
         padding: 24px;
