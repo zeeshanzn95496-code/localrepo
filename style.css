@@ -10,9 +10,9 @@
     --text-muted: #94a3b8;
     --border-subtle: rgba(255, 255, 255, 0.08);
 
-    --navbar-bg: #000000;
-    --navbar-border: #333333;
-    --navbar-link: #ffffff;
+    --navbar-bg: rgba(20, 25, 35, 0.95);
+    --navbar-border: rgba(255, 255, 255, 0.15);
+    --navbar-link: #e2e8f0;
     --navbar-link-hover: #c0c0c0;
 
     --card-bg: #1e1e1e;
@@ -66,10 +66,10 @@
     --text-muted: #64748b;
     --border-subtle: rgba(0, 0, 0, 0.08);
 
-    --navbar-bg: #ffffff;
-    --navbar-border: #e5e7eb;
-    --navbar-link: #1f2937;
-    --navbar-link-hover: #000000;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --navbar-border: rgba(0, 0, 0, 0.15);
+    --navbar-link: #334155;
+    --navbar-link-hover: #0f172a;
 
     --card-bg: #ffffff;
     --card-border: #e5e7eb;
@@ -132,7 +132,8 @@ footer,
 .contact-title,
 .contact-subtitle,
 .contact-badge,
-.video-caption {
+.video-caption,
+.mercedes-logo {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -294,20 +295,62 @@ body {
 }
 
 .navbar {
-    min-height: 10vh;
+    min-height: 120px;
     background: var(--navbar-bg) !important;
     border-color: var(--navbar-border) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar .container {
+    padding-left: 0 !important;
 }
 
 .navbar .navbar-brand {
     color: var(--navbar-link) !important;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    height: 100%;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
 }
 
-.navbar .navbar-brand svg {
+.mercedes-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mercedes-logo {
     color: var(--navbar-link);
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.huge-navbar-text {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #c0c0c0;
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.5),
+                 0 0 20px rgba(192, 192, 192, 0.3),
+                 0 0 30px rgba(192, 192, 192, 0.2);
+    line-height: 1;
+}
+
+.mercedes-logo.rotating {
+    animation: rotateLogo 8s linear infinite;
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .navbar a {
@@ -318,10 +361,6 @@ body {
     margin-left: 30px;
 }
 
-.navbar a:hover {
-    color: var(--navbar-link-hover);
-}
-
 .navbar .nav-link {
     font-weight: 500;
     font-size: 0.95rem;
@@ -329,6 +368,42 @@ body {
     padding: 8px 18px !important;
     border-radius: 6px;
     transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.silver-shine {
+    position: relative;
+}
+
+.silver-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(192, 192, 192, 0.8),
+        rgba(255, 255, 255, 0.9),
+        rgba(192, 192, 192, 0.8),
+        transparent
+    );
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.silver-shine:hover::before {
+    left: 100%;
+}
+
+.silver-shine:hover {
+    color: #c0c0c0;
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.8),
+                 0 0 20px rgba(192, 192, 192, 0.6),
+                 0 0 30px rgba(192, 192, 192, 0.4);
 }
 
 .navbar .nav-link:hover,
@@ -659,6 +734,9 @@ footer p {
 
 /* Responsive Navbar Adjustments */
 @media (max-width: 991.98px) {
+    .navbar {
+        min-height: 100px;
+    }
     .navbar-nav li {
         margin-left: 0;
         margin-top: 10px;
@@ -668,6 +746,14 @@ footer p {
         margin-top: 12px;
         display: inline-flex;
         width: fit-content;
+    }
+    .mercedes-logo {
+        width: 45px;
+        height: 45px;
+    }
+    .huge-navbar-text {
+        font-size: 2rem;
+        letter-spacing: 3px;
     }
     .premium-hero {
         padding: 100px 0 70px;
@@ -698,6 +784,9 @@ footer p {
 }
 
 @media (max-width: 575.98px) {
+    .navbar {
+        min-height: 80px;
+    }
     .premium-hero {
         padding: 80px 0 50px;
     }
@@ -722,9 +811,17 @@ footer p {
         font-size: 0.95rem;
     }
     .video-wrapper {
-        height: 50vh;
+        height: 65vh;
     }
     .caption-content {
         font-size: 0.85rem;
+    }
+    .mercedes-logo {
+        width: 35px;
+        height: 35px;
+    }
+    .huge-navbar-text {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
     }
 }
