@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercedes-Benz | Luxury Redefined</title>
+    <title>Mercedes-Benz | 140 Years of Excellence</title>
   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     
     <!-- Theme Controller (executes early to prevent theme flashing) -->
@@ -16,7 +21,13 @@
    
     <nav class="navbar navbar-expand-lg sticky-top border-bottom border-secondary">
         <div class="container">
-            <a class="navbar-brand fw-bold tracking-wider" href="#">MERCEDES-BENZ</a>
+            <a class="navbar-brand fw-bold tracking-wider" href="#">
+                <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 6px;">
+                    <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="4"/>
+                    <path d="M50 7 L50 50 M50 50 L12 72 M50 50 L88 72" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                MERCEDES-BENZ
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +35,7 @@
                 <ul class="navbar-nav align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="#models">Models</a></li>
                     <li class="nav-item"><a class="nav-link" href="#innovation">Innovation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html" target="_blank" rel="noopener noreferrer">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle light or dark mode" title="Toggle theme">
@@ -36,23 +47,22 @@
     </nav>
 
   
-    <header class="hero-section d-flex align-items-center justify-content-center text-center">
-       <div class="video-background-container">
-   
-    <video autoplay muted loop playsinline class="bg-video">
-        <source src="New Maybach SL 680 😳_1080p60.mp4" type="video/mp4">
-    </video>
-    <div class="content-overlay">
-        
-
-            <div class="container">
-                <h1 class="display-3 fw-bold text-uppercase mb-3">Luxury. Performance. Innovation</h1>
-                <p class="lead text-secondary mb-4">Experience unmatched luxury, cutting-edge technology, and legendary performance.</p>
-                <a href="#models" class="btn btn-dark btn-lg px-4 fw-semibold">Explore Models</a>
+    <header class="premium-hero d-flex align-items-center justify-content-center text-center">
+        <div class="container">
+            <div class="hero-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                140 YEARS OF EXCELLENCE
+            </div>
+            <h1 class="hero-title">Mercedes-Benz</h1>
+            <p class="hero-subtitle">The Birth of Mobility. The Future of Luxury.</p>
+            <div class="hero-cta-container">
+                <a href="about.html" class="hero-cta">Discover Eras</a>
+                <a href="#models" class="hero-secondary-cta">Explore Models</a>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <section id="models" class="container py-5 ">
         <div class="text-center mb-5">
@@ -153,32 +163,95 @@
         </div>
     </section>
 
-    
-    <section id="contact" class="container py-5 px-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <div class="card p-4 shadow">
-                    <h3 class="fw-bold text-center bg-warning mb-4">Book a Test Drive</h3>
-                    <form>
-                        <div class="mb-3">
-                            <label for="fullName" class="form-label text-secondary">Full Name</label>
-                            <input type="text" class="form-control bg-dark text-light border-secondary" id="fullName" placeholder="John Doe" required>
+
+    <section id="contact" class="premium-contact-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="contact-form-wrapper">
+                        <div class="contact-header">
+                            <div class="contact-badge">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                EXCLUSIVE EXPERIENCE
+                            </div>
+                            <h2 class="contact-title">Request Your Private Test Drive</h2>
+                            <p class="contact-subtitle">Experience the pinnacle of automotive excellence. Schedule your personalized consultation and test drive at your nearest Mercedes-Benz showroom.</p>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label text-secondary">Email Address</label>
-                            <input type="email" class="form-control bg-dark text-light border-secondary" id="email" placeholder="john@example.com" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="modelSelect" class="form-label text-secondary">Preferred Model</label>
-                            <select class="form-select bg-dark text-light border-secondary" id="modelSelect">
-                                <option selected>Choose a model...</option>
-                                <option value="s-class">S-Class Sedan</option>
-                                <option value="GLS">GLS 600 Maybach</option>
-                                <option value="amg-gt">AMG GT Coupe</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-dark w-100 fw-semibold mt-3">Submit Request</button>
-                    </form>
+                        <form class="premium-form">
+                            <div class="form-group mb-4">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="your.email@example.com">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="+1 (555) 000-0000">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="modelSelect" class="form-label">Preferred Model</label>
+                                <select class="form-select" id="modelSelect">
+                                    <option value="" selected disabled>Select your preferred model...</option>
+                                    <optgroup label="Sedans">
+                                        <option value="a-class">A-Class Sedan</option>
+                                        <option value="c-class">C-Class Sedan</option>
+                                        <option value="e-class">E-Class Sedan</option>
+                                        <option value="s-class">S-Class Sedan</option>
+                                    </optgroup>
+                                    <optgroup label="SUVs">
+                                        <option value="gla">GLA</option>
+                                        <option value="glb">GLB</option>
+                                        <option value="glc">GLC</option>
+                                        <option value="gle">GLE</option>
+                                        <option value="gls">GLS</option>
+                                        <option value="gls-maybach">GLS 600 Maybach</option>
+                                        <option value="g-class">G-Class</option>
+                                    </optgroup>
+                                    <optgroup label="Coupes & Convertibles">
+                                        <option value="c-coupe">C-Class Coupe</option>
+                                        <option value="e-coupe">E-Class Coupe</option>
+                                        <option value="s-coupe">S-Class Coupe</option>
+                                        <option value="cls">CLS</option>
+                                        <option value="cle">CLE</option>
+                                        <option value="sl">SL</option>
+                                        <option value="slc">SLC</option>
+                                    </optgroup>
+                                    <optgroup label="Performance - AMG">
+                                        <option value="amg-a35">AMG A 35</option>
+                                        <option value="amg-a45">AMG A 45 S</option>
+                                        <option value="amg-c43">AMG C 43</option>
+                                        <option value="amg-c63">AMG C 63 S E-Performance</option>
+                                        <option value="amg-e53">AMG E 53</option>
+                                        <option value="amg-g63">AMG G 63</option>
+                                        <option value="amg-gt43">AMG GT 43</option>
+                                        <option value="amg-gt63">AMG GT 63 S E-Performance</option>
+                                        <option value="amg-sl63">AMG SL 63</option>
+                                    </optgroup>
+                                    <optgroup label="Electric - EQ">
+                                        <option value="eqa">EQA</option>
+                                        <option value="eqb">EQB</option>
+                                        <option value="eqe">EQE Sedan</option>
+                                        <option value="eqe-suv">EQE SUV</option>
+                                        <option value="eqs">EQS Sedan</option>
+                                        <option value="eqs-suv">EQS SUV</option>
+                                    </optgroup>
+                                    <optgroup label="Maybach">
+                                        <option value="maybach-s680">Mercedes-Maybach S 680</option>
+                                        <option value="maybach-gls600">Mercedes-Maybach GLS 600</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="message" class="form-label">Additional Notes</label>
+                                <textarea class="form-control" id="message" rows="3" placeholder="Any specific requirements or preferences..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Schedule Test Drive</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
