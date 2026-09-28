@@ -15,6 +15,9 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
+
+    <!-- Theme Controller (executes early to prevent theme flashing) -->
+    <script src="theme.js"></script>
 </head>
 <body>
 
@@ -31,7 +34,7 @@
             <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#historyNav" aria-controls="historyNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="historyNav">
+            <div class="collapse navbar-collapse justify-content-end align-items-center" id="historyNav">
                 <ul class="navbar-nav align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#models">Models</a></li>
@@ -39,6 +42,10 @@
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
                 </ul>
+                <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle light or dark mode" title="Toggle theme">
+                    <span class="theme-icon"></span>
+                    <span class="theme-text">Light</span>
+                </button>
             </div>
         </div>
     </nav>

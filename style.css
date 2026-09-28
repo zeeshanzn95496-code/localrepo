@@ -1,14 +1,129 @@
+/* ==========================================================================
+   Mercedes-Benz Main Stylesheet - Dark / Light Luxury Themes
+   ========================================================================== */
+
+:root,
+[data-theme="dark"] {
+    --bg-body: #121212;
+    --text-color: #f8f9fa;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
+    
+    --navbar-bg: #000000;
+    --navbar-border: #333333;
+    --navbar-link: #ffffff;
+    --navbar-link-hover: #c0c0c0;
+    
+    --card-bg: #1e1e1e;
+    --card-border: #333333;
+    --card-title: #f8f9fa;
+    --card-text: #9ca3af;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    
+    --innovation-bg: #050505;
+    --innovation-title: #ffffff;
+    --innovation-text: #9ca3af;
+    
+    --input-bg: #212529;
+    --input-border: #495057;
+    --input-text: #f8f9fa;
+    --input-placeholder: #6c757d;
+    --label-color: #9ca3af;
+    
+    --btn-submit-bg: #212529;
+    --btn-submit-text: #ffffff;
+    
+    --footer-bg: #000000;
+    --footer-text: #9ca3af;
+    --footer-border: #222222;
+    
+    --btn-toggle-bg: rgba(255, 255, 255, 0.08);
+    --btn-toggle-border: rgba(255, 255, 255, 0.2);
+    --btn-toggle-text: #e2e8f0;
+    --btn-toggle-hover: rgba(255, 255, 255, 0.16);
+    
+    --btn-outline-color: #ffffff;
+    --btn-outline-border: #ffffff;
+    --btn-outline-hover-bg: #ffffff;
+    --btn-outline-hover-text: #000000;
+    
+    --heading-color: #ffffff;
+    --subheading-color: #9ca3af;
+    --gold-accent: #d4af37;
+}
+
+[data-theme="light"] {
+    --bg-body: #f5f6f8;
+    --text-color: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+    
+    --navbar-bg: #ffffff;
+    --navbar-border: #e5e7eb;
+    --navbar-link: #1f2937;
+    --navbar-link-hover: #000000;
+    
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
+    --card-title: #111827;
+    --card-text: #4b5563;
+    --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    
+    --innovation-bg: #eaebee;
+    --innovation-title: #111827;
+    --innovation-text: #4b5563;
+    
+    --input-bg: #ffffff;
+    --input-border: #d1d5db;
+    --input-text: #111827;
+    --input-placeholder: #9ca3af;
+    --label-color: #374151;
+    
+    --btn-submit-bg: #111827;
+    --btn-submit-text: #ffffff;
+    
+    --footer-bg: #111827;
+    --footer-text: #9ca3af;
+    --footer-border: #1f2937;
+    
+    --btn-toggle-bg: rgba(0, 0, 0, 0.05);
+    --btn-toggle-border: rgba(0, 0, 0, 0.15);
+    --btn-toggle-text: #1f2937;
+    --btn-toggle-hover: rgba(0, 0, 0, 0.12);
+    
+    --btn-outline-color: #111827;
+    --btn-outline-border: #111827;
+    --btn-outline-hover-bg: #111827;
+    --btn-outline-hover-text: #ffffff;
+    
+    --heading-color: #111827;
+    --subheading-color: #4b5563;
+    --gold-accent: #b8860b;
+}
+
+/* Global Transition for smooth theme switching */
+body, 
+.navbar, 
+.card, 
+#innovation, 
+#contact .card, 
+.form-control, 
+.form-select, 
+footer {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 body {
-    background-color: #121212;
-    color: #f8f9fa;
+    background-color: var(--bg-body);
+    color: var(--text-color);
 }
 
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
     background-size: cover;
     height: 150vh;
-
 }
+
 .bg-video {
     position: absolute;
     top: 50%;
@@ -18,10 +133,10 @@ body {
     min-height: 100%;
     width: auto;
     height: auto;
-    
     z-index: 1; 
     object-fit: cover;
 }
+
 .content-overlay {
     position: relative;
     z-index: 2;  
@@ -37,69 +152,206 @@ body {
     align-items: center;
     justify-content: center;
 }
-.container h1{
-    color: beige;
 
-}
-.container p{
+.content-overlay h1 {
     color: beige;
+}
+
+.content-overlay p {
+    color: beige;
+}
+
+#models h2 {
+    color: var(--heading-color);
+}
+
+#models p.text-secondary {
+    color: var(--subheading-color) !important;
 }
 
 .card {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
 }
 
-.card-title, 
+.card-title {
+    color: var(--card-title);
+}
+
 .card-text {
-    color: #f8f9fa;
+    color: var(--card-text);
 }
-.navbar{
-    height: 10vh;
-    background:black;
-}
-.navbar a{
-    color: #ffffff;
-}
-.navbar-nav li{
-    margin-left: 50px;
 
+.card .btn-outline-light {
+    color: var(--btn-outline-color);
+    border-color: var(--btn-outline-border);
 }
-.navbar a:hover{
-    color: silver;
+
+.card .btn-outline-light:hover {
+    background-color: var(--btn-outline-hover-bg);
+    color: var(--btn-outline-hover-text);
+    border-color: var(--btn-outline-hover-bg);
 }
-.cd1{
+
+.navbar {
+    min-height: 10vh;
+    background: var(--navbar-bg) !important;
+    border-color: var(--navbar-border) !important;
+}
+
+.navbar .navbar-brand {
+    color: var(--navbar-link) !important;
+}
+
+.navbar a {
+    color: var(--navbar-link);
+}
+
+.navbar-nav li {
+    margin-left: 30px;
+}
+
+.navbar a:hover {
+    color: var(--navbar-link-hover);
+}
+
+/* Theme Toggle Button in Navbar */
+.theme-toggle-btn {
+    background: var(--btn-toggle-bg);
+    border: 1px solid var(--btn-toggle-border);
+    color: var(--btn-toggle-text);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+    margin-left: 20px;
+}
+
+.theme-toggle-btn:hover {
+    background: var(--btn-toggle-hover);
+    color: var(--heading-color);
+    transform: translateY(-1px);
+}
+
+.theme-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Featured Vehicle Cards Hover Zoom */
+.cd1 {
     justify-content: start;
-   border: 1px solid transparent;
-   border-radius: 8px;
-
-}
-.cd1:hover{
-    background-color: rgba(0, 0, 0, 0.4);
-    border-color: silver;
-    color:silver;
-    box-shadow: 0 0 20px silver, inset 0 0 10px silver;
-transform: skewX(180deg) scale(1.5);
-z-index: 20;
-cursor:zoom-in;
-letter-spacing: 2px;
-word-spacing: 2px;
-font-style: italic;
-align-items: center;
-transition: transform 2.5s;
- transform:  rotateY(360deg) scale(1.5);
- font-size:30px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.container a{
-    font-size: 20px;
+.cd1:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    transform: translateY(-6px);
 }
-.img{
-    height:100%;
+
+/* Innovation Section */
+#innovation {
+    background-color: var(--innovation-bg) !important;
+    border-color: var(--navbar-border) !important;
+}
+
+#innovation h2 {
+    color: var(--innovation-title);
+}
+
+#innovation p,
+#innovation li {
+    color: var(--innovation-text) !important;
+}
+
+#innovation .btn-custom-learn {
+    background-color: var(--heading-color);
+    color: var(--bg-body);
+    border: 1px solid var(--heading-color);
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+#innovation .btn-custom-learn:hover {
+    background-color: transparent;
+    color: var(--heading-color);
+}
+
+/* Contact Section & Form */
+#contact .card {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+#contact h3 {
+    letter-spacing: 1px;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+#contact .form-label {
+    color: var(--label-color) !important;
+}
+
+#contact .form-control,
+#contact .form-select {
+    background-color: var(--input-bg) !important;
+    color: var(--input-text) !important;
+    border-color: var(--input-border) !important;
+}
+
+#contact .form-control::placeholder {
+    color: var(--input-placeholder);
+}
+
+#contact .btn-dark {
+    background-color: var(--btn-submit-bg);
+    border-color: var(--btn-submit-bg);
+    color: var(--btn-submit-text);
+}
+
+#contact .btn-dark:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg) !important;
+    border-color: var(--footer-border) !important;
+}
+
+footer p {
+    color: var(--footer-text) !important;
+}
+
+.img {
+    height: 100%;
     width: 100%;
     background-size: 100%;
-    margin-left: 200px;
-    margin-top: 30px;
+    margin-left: 0;
+    margin-top: 15px;
 }
 
-
+/* Responsive Navbar Adjustments */
+@media (max-width: 991.98px) {
+    .navbar-nav li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .theme-toggle-btn {
+        margin-left: 0;
+        margin-top: 12px;
+        display: inline-flex;
+        width: fit-content;
+    }
+}
