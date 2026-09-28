@@ -1,8 +1,10 @@
 /**
- * Mercedes-Benz Theme Controller (Dark / Light Mode)
- * Matches the luxury automotive brand aesthetic:
- * - Obsidian Dark: Deep carbon, polished silver & gold accents
- * - Platinum Light: Refined showroom white, brushed chrome & charcoal
+ * Mercedes-Benz Luxury Theme Controller with Cinematic Screen Transition
+ * Features:
+ * - View Transitions API circular reveal (Chrome, Edge, Safari 18+)
+ * - Radial sweep overlay fallback (Firefox & older browsers)
+ * - Tactile icon spin & ripple
+ * - Preference persistence in localStorage & cross-tab synchronization
  */
 
 (function () {
@@ -20,16 +22,16 @@
         if (stored === 'light' || stored === 'dark') {
             return stored;
         }
-        return 'dark'; // Default to Mercedes-Benz signature dark aesthetic
+        return 'dark'; // Mercedes-Benz signature dark aesthetic by default
     }
 
-    // Apply theme to document and update toggle buttons
+    // Apply theme attribute to document and update toggle button state
     function setTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
         try {
             localStorage.setItem(THEME_KEY, theme);
         } catch (e) {
-            // In case localStorage is blocked by private mode
+            // In case localStorage is blocked in private browsing
         }
 
         const buttons = document.querySelectorAll('.theme-toggle-btn');
@@ -50,14 +52,102 @@
         });
     }
 
-    // Toggle theme
-    function toggleTheme() {
+    // Animated Theme Transition with Screen Ripple Effect
+    function toggleThemeWithAnimation(event) {
         const current = document.documentElement.getAttribute('data-theme') || 'dark';
         const next = current === 'dark' ? 'light' : 'dark';
-        setTheme(next);
+
+        // Trigger icon rotation feedback
+        const targetBtn = event ? event.currentTarget : null;
+        if (targetBtn) {
+            const icon = targetBtn.querySelector('.theme-icon');
+            if (icon) {
+                icon.classList.remove('rotating');
+                void icon.offsetWidth; // trigger reflow
+                icon.classList.add('rotating');
+                setTimeout(() => icon.classList.remove('rotating'), 650);
+            }
+        }
+
+        // Determine click origin coordinates
+        let x = window.innerWidth / 2;
+        let y = 60;
+        if (event && (event.clientX || event.clientY)) {
+            x = event.clientX;
+            y = event.clientY;
+        } else if (targetBtn) {
+            const rect = targetBtn.getBoundingClientRect();
+            x = rect.left + rect.width / 2;
+            y = rect.top + rect.height / 2;
+        }
+
+        // Calculate maximum distance to screen corners for full coverage
+        const maxRadius = Math.hypot(
+            Math.max(x, window.innerWidth - x),
+            Math.max(y, window.innerHeight - y)
+        );
+
+        // Check if user prefers reduced motion
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Path 1: Native View Transitions API (Modern Chrome, Edge, Safari 18+)
+        if (document.startViewTransition && !prefersReducedMotion) {
+            const transition = document.startViewTransition(() => {
+                setTheme(next);
+            });
+
+            transition.ready.then(() => {
+                document.documentElement.animate(
+                    {
+                        clipPath: [
+                            `circle(0px at ${x}px ${y}px)`,
+                            `circle(${maxRadius}px at ${x}px ${y}px)`
+                        ]
+                    },
+                    {
+                        duration: 650,
+                        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+                        pseudoElement: '::view-transition-new(root)'
+                    }
+                );
+            });
+            return;
+        }
+
+        // Path 2: Fallback Radial Overlay Transition (Firefox, older browsers, or reduced motion)
+        if (prefersReducedMotion) {
+            setTheme(next);
+            return;
+        }
+
+        let overlay = document.getElementById('themeTransitionOverlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.id = 'themeTransitionOverlay';
+            overlay.className = 'theme-transition-overlay';
+            document.body.appendChild(overlay);
+        }
+
+        overlay.style.setProperty('--clip-x', `${x}px`);
+        overlay.style.setProperty('--clip-y', `${y}px`);
+        overlay.style.backgroundColor = next === 'light' ? '#f5f6f8' : '#121212';
+
+        overlay.classList.remove('active');
+        void overlay.offsetWidth; // Force reflow
+        overlay.classList.add('active');
+
+        // Switch theme midway through expansion
+        setTimeout(() => {
+            setTheme(next);
+        }, 280);
+
+        // Remove overlay after animation completes
+        setTimeout(() => {
+            overlay.classList.remove('active');
+        }, 700);
     }
 
-    // Immediately apply theme before full DOM rendering to avoid flashing
+    // Immediately apply theme before DOM renders to prevent flash
     const initialTheme = getPreferredTheme();
     document.documentElement.setAttribute('data-theme', initialTheme);
 
@@ -66,10 +156,9 @@
         setTheme(document.documentElement.getAttribute('data-theme') || initialTheme);
 
         document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
-            btn.removeEventListener('click', toggleTheme);
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                toggleTheme();
+                toggleThemeWithAnimation(e);
             });
         });
     });
@@ -81,6 +170,6 @@
         }
     });
 
-    // Export toggle function globally if needed
-    window.toggleMercedesTheme = toggleTheme;
+    // Expose for external access
+    window.toggleMercedesTheme = toggleThemeWithAnimation;
 })();
