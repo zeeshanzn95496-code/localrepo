@@ -56,6 +56,7 @@
     --hero-badge-border: rgba(255, 255, 255, 0.12);
     --hero-badge-color: #d4af37;
     --hero-gradient: linear-gradient(180deg, #ffffff 40%, #94a3b8 100%);
+    --caption-bg: rgba(15, 17, 23, 0.95);
 }
 
 [data-theme="light"] {
@@ -111,6 +112,7 @@
     --hero-badge-border: rgba(184, 134, 11, 0.25);
     --hero-badge-color: #b8860b;
     --hero-gradient: linear-gradient(180deg, #0f172a 40%, #475569 100%);
+    --caption-bg: #f8fafc;
 }
 
 /* Global Transition for smooth theme switching */
@@ -129,7 +131,8 @@ footer,
 .contact-form-wrapper,
 .contact-title,
 .contact-subtitle,
-.contact-badge {
+.contact-badge,
+.video-caption {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -412,17 +415,91 @@ body {
     pointer-events: none;
 }
 
-/* Featured Vehicle Cards Hover Zoom */
-.cd1 {
-    justify-content: start;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+/* Premium Video Section */
+.premium-video-section {
+    background: var(--bg-body);
+    border-top: 1px solid var(--border-subtle);
 }
 
-.cd1:hover {
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-    transform: translateY(-6px);
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: var(--hero-badge-bg);
+    border: 1px solid var(--hero-badge-border);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--hero-badge-color);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.video-wrapper {
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    width: 100%;
+    height: 85vh;
+    margin-top: 30px;
+}
+
+.premium-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.video-caption {
+    background: var(--caption-bg);
+    padding: 16px 20px;
+    border-top: 1px solid var(--border-subtle);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.caption-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.caption-content svg {
+    color: var(--gold-accent);
+    flex-shrink: 0;
 }
 
 /* Innovation Section */
@@ -612,6 +689,12 @@ footer p {
     .contact-title {
         font-size: 1.6rem;
     }
+    .section-title {
+        font-size: 2rem;
+    }
+    .video-wrapper {
+        height: 75vh;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -631,5 +714,17 @@ footer p {
     }
     .contact-title {
         font-size: 1.4rem;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+    .video-wrapper {
+        height: 50vh;
+    }
+    .caption-content {
+        font-size: 0.85rem;
     }
 }
