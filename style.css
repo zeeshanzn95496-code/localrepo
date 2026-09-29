@@ -740,6 +740,11 @@ footer p {
 
 .models-header {
     text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.models-header {
+    text-align: center;
     padding: 60px 20px 40px;
 }
 
@@ -766,6 +771,9 @@ footer p {
     cursor: pointer;
     overflow: hidden;
     border-top: 1px solid var(--border-subtle);
+}
+
+.car-showcase-block:last-child {
     border-bottom: 1px solid var(--border-subtle);
 }
 
