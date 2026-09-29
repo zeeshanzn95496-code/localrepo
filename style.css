@@ -771,10 +771,12 @@ footer p {
     cursor: pointer;
     overflow: hidden;
     border-top: 1px solid var(--border-subtle);
+    margin-bottom: 20px;
 }
 
 .car-showcase-block:last-child {
     border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 0;
 }
 
 .car-image-container {
