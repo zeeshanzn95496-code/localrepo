@@ -743,6 +743,14 @@ footer p {
     padding: 60px 20px 30px;
 }
 
+.models-container {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px 40px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 .models-header {
     text-align: center;
     padding: 60px 20px 40px;
@@ -765,18 +773,13 @@ footer p {
 }
 
 .car-showcase-block {
-    width: 100%;
+    width: 50%;
     height: 40vh;
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    border-top: 1px solid var(--border-subtle);
-    margin-bottom: 20px;
-}
-
-.car-showcase-block:last-child {
-    border-bottom: 1px solid var(--border-subtle);
-    margin-bottom: 0;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
 }
 
 .car-image-container {
@@ -1141,6 +1144,27 @@ footer p {
     color: var(--gold-accent);
     border: 2px solid var(--gold-accent);
     transform: translateY(-2px);
+}
+
+/* Responsive adjustments for models page */
+@media (max-width: 991.98px) {
+    .car-showcase-block {
+        width: 100%;
+    }
+    .models-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .car-showcase-block {
+        width: 100%;
+        height: 35vh;
+    }
+    .models-container {
+        flex-direction: column;
+        padding: 0 15px 30px;
+    }
 }
 
 .img {
