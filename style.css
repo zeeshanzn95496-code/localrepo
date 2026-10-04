@@ -140,11 +140,11 @@ footer,
 .color-option,
 .option-card,
 .gallery-item {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 3s ease, color 3s ease, border-color 3s ease, box-shadow 3s ease;
 }
 
 .hero-title {
-    transition: background 0.3s ease;
+    transition: background 3s ease;
 }
 
 body {
@@ -301,7 +301,7 @@ body {
 }
 
 .navbar {
-    min-height: 120px;
+    min-height: 150px;
     background: var(--navbar-bg) !important;
     border-color: var(--navbar-border) !important;
     backdrop-filter: blur(12px);
@@ -330,7 +330,7 @@ body {
 
 .mercedes-logo {
     color: var(--navbar-link);
-    transition: color 0.3s ease;
+    transition: color 3s ease;
     display: block;
 }
 
@@ -347,7 +347,7 @@ body {
 }
 
 .mercedes-logo.rotating {
-    animation: rotateLogo 8s linear infinite;
+    animation: rotateLogo 2s linear infinite;
 }
 
 @keyframes rotateLogo {
@@ -971,15 +971,15 @@ footer p {
 }
 
 .spec-title {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 800;
     color: var(--text-primary);
     margin-bottom: 8px;
 }
 
 .spec-value {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 1.2rem;
 }
 
 /* Colors Grid */
@@ -1003,9 +1003,9 @@ footer p {
 }
 
 .color-name {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: var(--text-secondary);
-    font-weight: 500;
+    font-weight: 800;
 }
 
 /* Options Grid */
@@ -1179,6 +1179,7 @@ footer p {
     background-size: 100%;
     margin-left: 0;
     margin-top: 15px;
+    
 }
 
 /* Responsive Navbar Adjustments */
