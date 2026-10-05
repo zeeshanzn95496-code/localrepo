@@ -44,7 +44,7 @@
 
 /* Car Showcase Block (homepage grid) */
 .car-showcase-block {
-    width: 33.33%;
+    width: calc(33.333% - 13.34px);
     height: 40vh;
     position: relative;
     cursor: pointer;
@@ -417,7 +417,7 @@
    ------------------------------------------------------------------ */
 @media (max-width: 1199.98px) {
     .car-showcase-block {
-        width: 50%;
+        width: calc(50% - 10px);
     }
 }
 
