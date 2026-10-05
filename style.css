@@ -730,74 +730,7 @@ footer p {
     color: var(--footer-text) !important;
 }
 
-/* Models Showcase Section */
-.models-showcase-section {
-    min-height: calc(100vh - 120px);
-    background: var(--bg-body);
-    display: flex;
-    flex-direction: column;
-}
 
-.models-header {
-    text-align: center;
-    padding: 60px 20px 30px;
-}
-
-.models-container {
-    display: flex;
-    gap: 20px;
-    padding: 0 20px 40px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.models-header {
-    text-align: center;
-    padding: 60px 20px 40px;
-}
-
-.models-title {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 16px;
-    letter-spacing: 2px;
-}
-
-.models-subtitle {
-    color: var(--text-secondary);
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.car-showcase-block {
-    width: 33.33%;
-    height: 40vh;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-}
-
-.car-image-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.car-showcase-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.car-showcase-block:hover .car-showcase-image {
-    transform: scale(1.05);
-}
 
 .car-overlay {
     position: absolute;

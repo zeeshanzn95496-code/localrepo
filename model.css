@@ -1,0 +1,442 @@
+/* ==========================================================================
+   Mercedes-Benz — Models & Car Details Stylesheet
+   Extracted from style.css for modular organisation
+   ========================================================================== */
+
+/* ------------------------------------------------------------------
+   Models Showcase Section (index.html #models)
+   ------------------------------------------------------------------ */
+.models-showcase-section {
+    min-height: calc(100vh - 120px);
+    background: var(--bg-body);
+    display: flex;
+    flex-direction: column;
+}
+
+.models-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.models-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.models-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.models-container {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px 40px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* Car Showcase Block (homepage grid) */
+.car-showcase-block {
+    width: 33.33%;
+    height: 40vh;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+}
+
+.car-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.car-showcase-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.car-showcase-block:hover .car-showcase-image {
+    transform: scale(1.05);
+}
+
+.car-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+}
+
+.car-overlay-content {
+    color: #ffffff;
+    z-index: 2;
+}
+
+.car-name {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.car-tagline {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.car-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gold-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ------------------------------------------------------------------
+   Car Details Page
+   ------------------------------------------------------------------ */
+
+/* Hero */
+.car-details-hero {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: #ffffff;
+}
+
+.car-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: var(--gold-accent);
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.car-hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.car-hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold-accent);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* Sections shared by details page */
+.car-specs-section,
+.car-colors-section,
+.car-options-section,
+.car-gallery-section {
+    background: var(--bg-body);
+    border-top: 1px solid var(--border-subtle);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Specs Grid */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.spec-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+}
+
+.spec-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.spec-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.spec-value {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+/* Colors Grid */
+.colors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 24px;
+}
+
+.color-option {
+    text-align: center;
+}
+
+.color-swatch {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    border: 3px solid var(--border-subtle);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.color-name {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 800;
+}
+
+/* Options Grid */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.option-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+}
+
+.option-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.option-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Gallery */
+.gallery-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.gallery-tab {
+    padding: 12px 32px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-tab.active,
+.gallery-tab:hover {
+    background: var(--gold-accent);
+    color: #ffffff;
+    border-color: var(--gold-accent);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--card-shadow);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 12px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* CTA Section */
+.car-cta-section {
+    background: var(--bg-body);
+    border-top: 1px solid var(--border-subtle);
+}
+
+.cta-wrapper {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+.cta-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--gold-accent);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: var(--gold-accent);
+    border: 2px solid var(--gold-accent);
+    transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------------------
+   Responsive — Models / Car Details
+   ------------------------------------------------------------------ */
+@media (max-width: 1199.98px) {
+    .car-showcase-block {
+        width: 50%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .car-showcase-block {
+        width: 100%;
+    }
+    .models-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .car-showcase-block {
+        width: 100%;
+        height: 35vh;
+    }
+    .models-container {
+        flex-direction: column;
+        padding: 0 15px 30px;
+    }
+}
