@@ -492,6 +492,7 @@ body {
     min-height: 260px;
     display: flex;
     flex-direction: column;
+    background-size: auto;
 }
 
 .era-img {
@@ -670,6 +671,7 @@ body {
     .era-img {
         height: 220px;
         margin-bottom: 15px;
+        background-size: cover;
     }
     .era-image-wrapper {
         min-height: auto;
@@ -701,7 +703,7 @@ body {
         padding: 18px;
     }
     .era-img {
-        height: 190px;
+        height: 390px;
     }
     .stats-ribbon {
         grid-template-columns: 1fr 1fr;
