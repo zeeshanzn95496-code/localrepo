@@ -455,7 +455,7 @@ body {
     background: var(--era-badge-bg);
     border: 1px solid var(--era-badge-border);
     color: var(--era-badge-color);
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     font-weight: 700;
     letter-spacing: 1.5px;
     padding: 6px 16px;
@@ -473,7 +473,7 @@ body {
 }
 
 .era-title {
-    font-size: 1.55rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: var(--text-primary);
     line-height: 1.35;
@@ -526,7 +526,7 @@ body {
 
 /* Narrative Text Content */
 .era-text {
-    font-size: 0.98rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
     line-height: 1.8;
 }
@@ -555,7 +555,7 @@ body {
 }
 
 .era-chip {
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     padding: 5px 12px;
     background: var(--chip-bg);
     border: 1px solid var(--chip-border);
@@ -677,7 +677,7 @@ body {
         min-height: auto;
     }
     .era-title {
-        font-size: 1.35rem;
+        font-size: 1.5rem;
     }
     .era-nav-sticky {
         top: 60px;
