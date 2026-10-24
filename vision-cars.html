@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="model.css">
+    <link rel="stylesheet" href="vision.css">
 
     <!-- Theme Controller (executes early to prevent theme flashing) -->
     <script src="theme.js"></script>
@@ -49,26 +50,42 @@
         </div>
     </nav>
 
-    <main class="premium-hero d-flex align-items-center justify-content-center text-center" style="min-height: calc(100vh - 150px); padding: 80px 20px;">
+    <main class="vision-hero-wrapper text-center">
         <div class="container">
-            <div class="hero-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                </svg>
-                UNDER CONSTRUCTION
+            <div class="vision-badge">
+                <span class="vision-beacon"></span>
+                <span>UNDER CONSTRUCTION</span>
             </div>
             
-            <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 5rem); letter-spacing: 3px; max-width: 900px; margin: 0 auto 24px;">
+            <h1 class="vision-title">
                 THIS SPECIFIC PLACE IS IN CONSTRUCTION
             </h1>
 
-            <p class="hero-subtitle mb-5" style="max-width: 700px; margin: 0 auto 36px;">
-                We are currently designing and crafting this dedicated space for futuristic Mercedes-Benz Vision & Concept vehicles. Please check back soon.
+            <div class="vision-title-divider" aria-hidden="true">
+                <span class="line"></span>
+                <span class="star">✦</span>
+                <span class="line"></span>
+            </div>
+
+            <p class="vision-subtitle">
+                We are currently engineering a dedicated gallery for futuristic <span class="vision-highlight">Mercedes-Benz Vision & Concept Vehicles</span>. Experience the next era of luxury mobility soon.
             </p>
 
-            <div class="hero-cta-container">
-                <a href="index.html" class="hero-cta">Return to Home</a>
-                <a href="models.html" class="hero-secondary-cta">Explore Current Models</a>
+            <div class="vision-cta-container">
+                <a href="index.html" class="vision-primary-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    Return to Home
+                </a>
+                <a href="models.html" class="vision-secondary-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Explore Current Models
+                </a>
             </div>
         </div>
     </main>

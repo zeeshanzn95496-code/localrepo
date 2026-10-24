@@ -45,6 +45,7 @@ This website showcases Mercedes-Benz luxury cars, modern vehicle technology, and
   - style.css: Main design and theme colors.
   - model.css: Car grid and detail page styling.
   - about.css: History timeline design.
+  - vision.css: Vision Cars page styling and text decorations.
 - JavaScript: Theme switching and page interactions.
 - Bootstrap 5: Responsive layout and mobile navigation menu.
 
