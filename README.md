@@ -30,7 +30,10 @@ This website showcases Mercedes-Benz luxury cars, modern vehicle technology, and
 - Covers 140 years of history from 1886 to 2026 across 28 time periods.
 - Includes historical photos and milestones, from the first Benz Motorwagen to modern electric cars.
 
-### 4. Dark and Light Mode (theme.js)
+### 4. Vision Cars (vision-cars.html)
+- A dedicated page in the navigation bar opening in a new tab, currently under construction for concept vehicles.
+
+### 5. Dark and Light Mode (theme.js)
 - Easy one-click button to switch between dark mode and light mode.
 - Smooth transition animation when changing themes.
 - Remembers your selected theme even after closing or refreshing the browser.
