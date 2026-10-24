@@ -23,6 +23,7 @@ This website showcases Mercedes-Benz luxury cars, modern vehicle technology, and
   - Mercedes-AMG C 63 S
   - Mercedes-AMG CLS 63
   - Mercedes-Benz CLA Sedan
+  - Mercedes-Benz A-Class
 - Each car page shows engine power, top speed, acceleration, color choices, optional features, and a photo gallery.
 
 ### 3. History Timeline (about.html)
