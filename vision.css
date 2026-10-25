@@ -1,7 +1,7 @@
-/* ==========================================================================
+/* 
    Mercedes-Benz — Vision Cars Under Construction Stylesheet
    File: vision.css
-   ========================================================================== */
+*/
 
 
 .vision-hero-wrapper {
@@ -39,9 +39,9 @@
         linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
 }
 
-/* ------------------------------------------------------------------
+/*
    Pulsing Construction Badge
-   ------------------------------------------------------------------ */
+*/
 .vision-badge {
     display: inline-flex;
     align-items: center;
@@ -86,9 +86,9 @@
     }
 }
 
-/* ------------------------------------------------------------------
+/* 
    Text Decorations & Typography Effects
-   ------------------------------------------------------------------ */
+ */
 .vision-title {
     font-family: 'Cinzel', serif;
     font-size: clamp(2.4rem, 5.5vw, 4.6rem);
@@ -103,28 +103,32 @@
 
     /* Animated Liquid Chrome / Platinum Gradient Text */
     background: linear-gradient(
-        120deg, 
-        #9ca3af 0%, 
+        90deg, 
+        #9ca3af 0%,
+        #d4af37 15%,
         #ffffff 25%, 
         #d4af37 50%, 
         #ffffff 75%, 
+        #d4af37 85%,
         #9ca3af 100%
     );
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: textShimmer 6s linear infinite;
+    animation: textShimmer 3s linear infinite;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="light"] .vision-title {
     background: linear-gradient(
-        120deg, 
+        90deg, 
         #1e293b 0%, 
+        #f7b819 15%,
         #0f172a 25%, 
-        #9a7b2c 50%, 
-        #0f172a 75%, 
+        #f7b819 50%, 
+        #0f172a 75%,
+        #f7b819 85%,
         #334155 100%
     );
     background-size: 200% auto;
@@ -197,12 +201,12 @@
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
-/* ------------------------------------------------------------------
+/*
    Action Buttons
-   ------------------------------------------------------------------ */
+ */
 .vision-cta-container {
     display: flex;
-    gap: 20px;
+    gap: 50px;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 15px;
@@ -234,13 +238,21 @@
     box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
 }
 
+.vision-secondary-btn:hover{
+        color: #ffffff;
+    background: linear-gradient(135deg, #2a3a52, #162235);
+    border-color: rgba(212, 175, 55, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
+}
+
 .vision-secondary-btn {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 15px 36px;
-    background: transparent;
-    color: var(--text-color);
+     background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #ffffff;
     font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -250,24 +262,23 @@
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
+/*
 .vision-secondary-btn:hover {
     color: var(--text-color);
     border-color: var(--text-color);
     background: rgba(255, 255, 255, 0.05);
     transform: translateY(-3px);
 }
+    */
 
 [data-theme="light"] .vision-primary-btn {
     background: linear-gradient(135deg, #0f172a, #1e293b);
+     border-color: rgba(235, 191, 47, 0.893);
 }
 
 [data-theme="light"] .vision-secondary-btn {
-    color: #0f172a;
-    border-color: #cbd5e1;
-}
+     background: linear-gradient(135deg, #0f172a, #1e293b);
+      border-color: rgba(235, 191, 47, 0.893);
 
-[data-theme="light"] .vision-secondary-btn:hover {
-    background: rgba(0, 0, 0, 0.05);
-    border-color: #0f172a;
+
 }
