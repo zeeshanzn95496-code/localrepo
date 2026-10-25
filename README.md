@@ -57,6 +57,4 @@ You do not need to install anything to view this project.
 2. Double-click `index.html` to open it directly in your web browser (Chrome, Edge, Firefox, or Safari).
 3. Alternatively, open the folder in VS Code and use the Live Server extension.
 
-## Author
 
-Created by Zeeshan (2026).
