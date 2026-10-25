@@ -67,12 +67,12 @@
     border-radius: 50%;
     display: inline-block;
     box-shadow: 0 0 10px #e5c158;
-    animation: beaconBlink 1.5s infinite;
+    animation: beaconBlink 1s infinite;
 }
 
 @keyframes beaconBlink {
     0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.3; transform: scale(0.7); }
+    50% { opacity: 0.2; transform: scale(0.5); }
 }
 
 @keyframes badgePulse {
