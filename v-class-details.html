@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz V-Class | Detailed Specifications</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="model.css">
+
+    <!-- Theme Controller (executes early to prevent theme flashing) -->
+    <script src="theme.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom border-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold tracking-wider" href="index.html" style="margin-left: 0; padding-left: 0;">
+                <span class="huge-navbar-text">MERCEDES-BENZ</span>
+                <div class="mercedes-logo-wrapper">
+                    <svg class="mercedes-logo rotating" width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="4"/>
+                        <path d="M50 7 L50 50 M50 50 L12 72 M50 50 L88 72" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#detailsNav" aria-controls="detailsNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end align-items-center" id="detailsNav">
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link silver-shine" href="models.html">Models</a></li>
+                    <li class="nav-item"><a class="nav-link silver-shine" href="vision-cars.html" target="_blank">Vision Cars</a></li>
+                    <li class="nav-item"><a class="nav-link silver-shine" href="index.html#innovation">Innovation</a></li>
+                    <li class="nav-item"><a class="nav-link silver-shine" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link silver-shine" href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle light or dark mode" title="Toggle theme">
+                    <span class="theme-icon"></span>
+                    <span class="theme-text">Light</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="car-details-hero">
+        <div class="hero-image-container">
+            <img src="img/v-class.jpg" alt="Mercedes-Benz V-Class" class="hero-car-image">
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="car-badge">FIRST CLASS MPV</div>
+                        <h1 class="car-hero-title">Mercedes-Benz V-Class</h1>
+                        <p class="car-hero-subtitle">The S-Class Among Luxury Multi-Purpose Vehicles</p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">237</div>
+                                <div class="stat-label">HP</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">7.8</div>
+                                <div class="stat-label">0-100 km/h</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">220</div>
+                                <div class="stat-label">km/h Top Speed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="car-specs-section py-5">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    ENGINE SPECS
+                </div>
+                <h2 class="section-title">Engine Specifications</h2>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="spec-icon">⚙️</div>
+                    <h3 class="spec-title">Engine Type</h3>
+                    <p class="spec-value">2.0L Turbocharged Diesel (OM654)</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">🔥</div>
+                    <h3 class="spec-title">Power Output</h3>
+                    <p class="spec-value">237 HP @ 4,200 rpm</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">⚡</div>
+                    <h3 class="spec-title">Torque</h3>
+                    <p class="spec-value">500 Nm @ 1,600-2,400 rpm</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">🚀</div>
+                    <h3 class="spec-title">Acceleration</h3>
+                    <p class="spec-value">0-100 km/h in 7.8 seconds</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">💨</div>
+                    <h3 class="spec-title">Top Speed</h3>
+                    <p class="spec-value">220 km/h (electronically limited)</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">⛽</div>
+                    <h3 class="spec-title">Transmission</h3>
+                    <p class="spec-value">9G-TRONIC 9-Speed Automatic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="car-colors-section py-5">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    AVAILABLE COLORS
+                </div>
+                <h2 class="section-title">Exterior Colors</h2>
+            </div>
+
+            <div class="colors-grid">
+                <div class="color-option">
+                    <div class="color-swatch" style="background: #0d0d0d;"></div>
+                    <span class="color-name">Obsidian Black</span>
+                </div>
+                <div class="color-option">
+                    <div class="color-swatch" style="background: #f5f5f5; border: 1px solid #ddd;"></div>
+                    <span class="color-name">Rock Crystal White</span>
+                </div>
+                <div class="color-option">
+                    <div class="color-swatch" style="background: #50555c;"></div>
+                    <span class="color-name">Selenite Grey</span>
+                </div>
+                <div class="color-option">
+                    <div class="color-swatch" style="background: #c7cbd1;"></div>
+                    <span class="color-name">Brilliant Silver</span>
+                </div>
+                <div class="color-option">
+                    <div class="color-swatch" style="background: #1c355e;"></div>
+                    <span class="color-name">Cavansite Blue</span>
+                </div>
+                <div class="color-option">
+                    <div class="color-swatch" style="background: #7a1c22;"></div>
+                    <span class="color-name">Hyacinth Red</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="car-options-section py-5">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    OPTIONAL FEATURES
+                </div>
+                <h2 class="section-title">Available Options</h2>
+            </div>
+
+            <div class="options-grid">
+                <div class="option-card">
+                    <h3 class="option-title">First-Class Luxury Captain Seats</h3>
+                    <p class="option-description">Fully reclining rear executive seats with active ventilation, heating, and pneumatic massage</p>
+                </div>
+                <div class="option-card">
+                    <h3 class="option-title">AMG Line Styling Package</h3>
+                    <p class="option-description">Striking diamond radiator grille, AMG 19-inch 7-twin-spoke alloys, and aerodynamic side skirts</p>
+                </div>
+                <div class="option-card">
+                    <h3 class="option-title">Burmester® Surround Sound</h3>
+                    <p class="option-description">Immersive 15-speaker premium audio architecture tuned specifically for the large cabin volume</p>
+                </div>
+                <div class="option-card">
+                    <h3 class="option-title">Panoramic Sliding Sunroof</h3>
+                    <p class="option-description">Expansive two-section glass roof providing natural illumination throughout all seating rows</p>
+                </div>
+                <div class="option-card">
+                    <h3 class="option-title">AIRMATIC Air Suspension</h3>
+                    <p class="option-description">Self-leveling adaptive damping suspension delivering ultra-smooth gliding ride quality</p>
+                </div>
+                <div class="option-card">
+                    <h3 class="option-title">MBUX Dual Widescreen Cockpit</h3>
+                    <p class="option-description">High-resolution dual 12.3-inch displays with augmented navigation and "Hey Mercedes" voice control</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="car-gallery-section py-5">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    GALLERY
+                </div>
+                <h2 class="section-title">Exterior & Interior</h2>
+            </div>
+
+            <div class="gallery-tabs">
+                <button class="gallery-tab active" data-tab="exterior">Exterior</button>
+                <button class="gallery-tab" data-tab="interior">Interior</button>
+            </div>
+
+            <div class="gallery-content">
+                <div class="gallery-grid" id="exterior-gallery">
+                    <div class="gallery-item">
+                        <img src="img/v-class.jpg" alt="V-Class Exterior Front" class="gallery-image">
+                        <div class="gallery-caption">Executive AMG Line Front Styling</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/v-class.jpg" alt="V-Class Exterior Profile" class="gallery-image">
+                        <div class="gallery-caption">Extended Luxury Wheelbase Silhouette</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/v-class.jpg" alt="V-Class Exterior Rear" class="gallery-image">
+                        <div class="gallery-caption">Sculpted Tailgate with Easy-Pack Window</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/v-class.jpg" alt="V-Class Exterior Headlamps" class="gallery-image">
+                        <div class="gallery-caption">MULTIBEAM LED Intelligent Headlamps</div>
+                    </div>
+                </div>
+
+                <div class="gallery-grid" id="interior-gallery" style="display: none;">
+                    <div class="gallery-item">
+                        <img src="img/v-class.jpg" alt="V-Class VIP Cabin" class="gallery-image">
+                        <div class="gallery-caption">First-Class Executive Lounge Seating</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/v-class.jpg" alt="V-Class Cockpit" class="gallery-image">
+                        <div class="gallery-caption">Dual 12.3" MBUX Widescreen Cockpit</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/v-class.jpg" alt="V-Class Steering" class="gallery-image">
+                        <div class="gallery-caption">Nappa Leather Touch-Control Steering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/v-class.jpg" alt="V-Class Ambient Cabin" class="gallery-image">
+                        <div class="gallery-caption">64-Color Ambient Interior Sanctuary</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="car-cta-section py-5">
+        <div class="container">
+            <div class="cta-wrapper">
+                <h2 class="cta-title">Experience the V-Class</h2>
+                <p class="cta-subtitle">Schedule your personalized consultation and experience first-class travel for family and executive journeys</p>
+                <a href="index.html#contact" class="cta-button">Book Test Drive</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-secondary text-center py-4 border-top border-secondary">
+        <div class="container">
+            <p class="mb-0">Zeeshan 2026. Mercedes Benz Themed Web Project</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // Gallery tab switching
+        document.querySelectorAll('.gallery-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                document.querySelectorAll('.gallery-grid').forEach(grid => grid.style.display = 'none');
+                const tabName = tab.getAttribute('data-tab');
+                document.getElementById(`${tabName}-gallery`).style.display = 'grid';
+            });
+        });
+    </script>
+</body>
+</html>
