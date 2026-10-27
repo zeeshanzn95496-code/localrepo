@@ -59,6 +59,21 @@
             </div>
             <h1 class="models-title">Mercedes-Benz Models</h1>
             <p class="models-subtitle">Discover our collection of luxury and performance vehicles</p>
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                    <input type="text" id="modelSearch" class="search-input" placeholder="Search models by name..." aria-label="Search models">
+                    <button id="clearSearch" class="clear-search" style="display: none;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
 
         <div class="models-container">
@@ -278,6 +293,13 @@
                 </div>
             </div>
         </div>
+        <div class="no-results" id="noResults">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <p>No models found matching your search.</p>
+        </div>
     </section>
 
     <footer class="bg-black text-secondary text-center py-4 border-top border-secondary">
@@ -287,6 +309,53 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('modelSearch');
+        const clearSearchBtn = document.getElementById('clearSearch');
+        const carBlocks = document.querySelectorAll('.car-showcase-block');
+        const noResults = document.getElementById('noResults');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+
+            // Show/hide clear button
+            clearSearchBtn.style.display = searchTerm.length > 0 ? 'flex' : 'none';
+
+            let visibleCount = 0;
+
+            carBlocks.forEach(block => {
+                const carName = block.querySelector('.car-name').textContent.toLowerCase();
+                const carTagline = block.querySelector('.car-tagline').textContent.toLowerCase();
+
+                if (carName.includes(searchTerm) || carTagline.includes(searchTerm)) {
+                    block.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    block.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            noResults.style.display = visibleCount === 0 && searchTerm.length > 0 ? 'block' : 'none';
+        });
+
+        // Clear search button
+        clearSearchBtn.addEventListener('click', function() {
+            searchInput.value = '';
+            searchInput.dispatchEvent(new Event('input'));
+            searchInput.focus();
+        });
+
+        // Clear search on Escape key
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
+            }
+        });
+    </script>
 </body>
 </html>
 
