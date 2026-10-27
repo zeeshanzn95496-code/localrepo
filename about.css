@@ -2,6 +2,11 @@
    Mercedes-Benz Heritage & History - Style Sheet (Dark / Light Luxury Themes)
    ========================================================================== */
 
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
 :root,
 [data-theme="dark"] {
     --bg-primary: #0c0d11;
@@ -610,40 +615,7 @@ body {
 }
 
 /* ---------------- Back To Top Floating Button ---------------- */
-.btn-back-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: var(--btn-top-bg);
-    border: 1px solid var(--btn-top-border);
-    color: var(--btn-top-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    text-decoration: none;
-}
-
-.btn-back-top.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.btn-back-top:hover {
-    background: var(--gold-accent);
-    color: #ffffff;
-    border-color: var(--gold-accent);
-    transform: translateY(-3px);
-}
+/* Using back-to-top-always from model.css instead */
 
 /* ---------------- Footer ---------------- */
 .history-footer {

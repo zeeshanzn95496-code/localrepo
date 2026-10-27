@@ -2,6 +2,11 @@
    Mercedes-Benz Main Stylesheet - Dark / Light Luxury Themes
    ========================================================================== */
 
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
 :root,
 [data-theme="dark"] {
     --bg-body: #0c0d11;
