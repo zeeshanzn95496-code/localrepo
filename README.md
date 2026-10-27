@@ -27,6 +27,7 @@ This website showcases Mercedes-Benz luxury cars, modern vehicle technology, and
   - Mercedes-Benz C 220
   - Mercedes-AMG GT
   - Mercedes-Benz V-Class
+  - Mercedes-Benz GLE
 - Each car page shows engine power, top speed, acceleration, color choices, optional features, and a photo gallery.
 
 ### 3. History Timeline (about.html)
