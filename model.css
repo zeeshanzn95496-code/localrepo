@@ -131,6 +131,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.car-showcase-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    border-color: var(--gold-accent);
 }
 
 .car-image-container {
@@ -140,6 +148,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .car-showcase-image {
@@ -155,7 +164,7 @@
 }
 
 .car-showcase-block:hover .car-showcase-image {
-    transform: scale(1.05);
+    transform: scale(1.12);
 }
 
 .car-overlay {
@@ -168,12 +177,23 @@
     display: flex;
     align-items: flex-end;
     padding: 26px;
-    transition: background 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.car-showcase-block:hover .car-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.2) 100%);
+    padding: 30px;
 }
 
 .car-overlay-content {
     color: #ffffff;
     z-index: 2;
+    transform: translateY(0);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.car-showcase-block:hover .car-overlay-content {
+    transform: translateY(-4px);
 }
 
 .car-name {
@@ -183,6 +203,11 @@
     margin-bottom: 6px;
     letter-spacing: 1.5px;
     line-height: 1.25;
+    transition: color 0.3s ease;
+}
+
+.car-showcase-block:hover .car-name {
+    color: var(--gold-accent);
 }
 
 .car-tagline {
@@ -190,6 +215,11 @@
     margin-bottom: 14px;
     opacity: 0.9;
     line-height: 1.4;
+    transition: opacity 0.3s ease;
+}
+
+.car-showcase-block:hover .car-tagline {
+    opacity: 1;
 }
 
 .car-cta {
@@ -201,6 +231,65 @@
     color: var(--gold-accent);
     text-transform: uppercase;
     letter-spacing: 1px;
+    opacity: 0.85;
+    transform: translateX(0);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.car-showcase-block:hover .car-cta {
+    opacity: 1;
+    transform: translateX(8px);
+    gap: 14px;
+}
+
+.car-cta svg {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.car-showcase-block:hover .car-cta svg {
+    transform: translateX(4px);
+}
+
+/* Shine effect on hover */
+.car-showcase-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: left 0.6s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.car-showcase-block:hover::before {
+    left: 100%;
+}
+
+/* Glow effect on hover */
+.car-showcase-block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 0 var(--gold-accent);
+    transition: box-shadow 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.car-showcase-block:hover::after {
+    box-shadow: inset 0 0 0 2px var(--gold-accent);
 }
 
 /* ------------------------------------------------------------------
@@ -527,6 +616,9 @@
         height: 440px;
         min-height: 400px;
     }
+    .car-showcase-block:hover {
+        transform: translateY(-6px);
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -534,6 +626,9 @@
         width: 100%;
         height: 420px;
         min-height: 380px;
+    }
+    .car-showcase-block:hover {
+        transform: translateY(-4px);
     }
     .models-container {
         flex-direction: column;
@@ -555,6 +650,9 @@
         width: 100%;
         height: 380px;
         min-height: 340px;
+    }
+    .car-showcase-block:hover {
+        transform: translateY(-2px);
     }
     .models-container {
         flex-direction: column;
