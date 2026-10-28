@@ -211,6 +211,7 @@ html {
     padding: 0 20px 40px;
     flex-wrap: wrap;
     justify-content: flex-start;
+    perspective: 1500px;
 }
 
 /* Car Showcase Block (homepage grid) */
@@ -228,10 +229,11 @@ html {
     background-repeat: no-repeat;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
 }
 
 .car-showcase-block:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
     border-color: var(--gold-accent);
 }
@@ -712,7 +714,7 @@ html {
         min-height: 400px;
     }
     .car-showcase-block:hover {
-        transform: translateY(-6px);
+        transform: translateY(-6px) rotateX(3deg) rotateY(-3deg);
     }
 }
 
@@ -723,7 +725,7 @@ html {
         min-height: 380px;
     }
     .car-showcase-block:hover {
-        transform: translateY(-4px);
+        transform: translateY(-4px) rotateX(2deg) rotateY(-2deg);
     }
     .models-container {
         flex-direction: column;
