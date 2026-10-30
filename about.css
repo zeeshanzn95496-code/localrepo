@@ -83,7 +83,7 @@ html {
     --bg-secondary: #eaecf0;
     --bg-card: #ffffff;
     --bg-card-hover: #fcfdfe;
-    --border-subtle: rgba(0, 0, 0, 0.08);
+    --border-subtle: rgb(0, 0, 0);
     --border-hover: rgba(184, 134, 11, 0.45);
     
     --silver-accent: #334155;
@@ -101,7 +101,7 @@ html {
     --navbar-link-active: #0f172a;
     
     --hero-radial: radial-gradient(circle at 50% 20%, rgba(226, 232, 240, 0.85) 0%, rgba(245, 246, 248, 1) 75%);
-    --hero-h1-gradient: linear-gradient(180deg, #0f172a 40%, #475569 100%);
+    --hero-h1-gradient: linear-gradient( rgba(245, 246, 248, 1) 100%);
     --hero-badge-bg: rgba(184, 134, 11, 0.08);
     --hero-badge-border: rgba(184, 134, 11, 0.25);
     --hero-badge-color: #b8860b;
@@ -274,6 +274,7 @@ body {
     gap: 8px;
     padding: 6px 16px;
     background: var(--hero-badge-bg);
+    color: #000000;
     border: 1px solid var(--hero-badge-border);
     border-radius: 50px;
     font-size: 0.85rem;
@@ -289,7 +290,7 @@ body {
     letter-spacing: 2px;
     line-height: 1.15;
     background: var(--hero-h1-gradient);
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color:black;
     margin-bottom: 20px;
 }
 
