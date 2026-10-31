@@ -151,6 +151,47 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Gold Gradient Text Effect */
+.gradient-text-gold {
+    background: linear-gradient(
+        135deg,
+        #d4af37 0%,
+        #f4e4bc 25%,
+        #d4af37 50%,
+        #c9a227 75%,
+        #d4af37 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShimmer 3s linear infinite;
+}
+
+@keyframes gradientShimmer {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+[data-theme="light"] .gradient-text-gold {
+    background: linear-gradient(
+        135deg,
+        #b8860b 0%,
+        #d4af37 25%,
+        #b8860b 50%,
+        #c9a227 75%,
+        #b8860b 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 /* Hide back-to-top when at top using CSS checkbox hack */
 #scrollTopCheckbox {
     position: fixed;
